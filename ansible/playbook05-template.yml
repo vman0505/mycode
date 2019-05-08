@@ -1,0 +1,10 @@
+---
+- name: my template playbook
+  hosts: planet-express
+  gather_facts: yes
+
+  tasks:
+  - name: render template
+    template:
+      src: ~/mycode/ansible/template/ship.conf.j2
+      dest: ~/ship.conf
